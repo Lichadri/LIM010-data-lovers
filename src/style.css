@@ -1,0 +1,135 @@
+header{
+    flex-flow: column;
+    align-items: center;
+    width: 100%;
+    padding: 30px 0px;
+}
+
+
+#encabezado{
+    background-image: url(./Imagenes/pokedata.png);
+    background-repeat: no-repeat;
+    padding: 30px 0px;
+    background-size: contain;
+    background-position: center;
+    width: 100%;
+    }
+    @media(min-width:600px) {
+        #encabezado{
+            background-image: url(./Imagenes/pokedata.png);
+            background-repeat: no-repeat;
+            padding: 30px 0px;
+            background-size: contain;
+            background-position: center;
+            width: 100%;
+            height: 140px;
+            }
+        }
+#pokebola{
+        background-image: url(./Imagenes/pokebola.png);
+        background-repeat: no-repeat;
+        width: 100%;
+        padding: 20px 0px;
+        background-size: contain;
+        background-position: center;
+    }
+    @media(min-width:600px) {
+        #pokebola{
+            background-image: url(./Imagenes/pokebola.png);
+            background-repeat: no-repeat;
+            padding: 30px 0px;
+            background-size: contain;
+            background-position: center;
+            width: 100%;
+            height: 60px;
+            }
+        }
+
+    .hide{
+    Display:none;
+    }
+    
+
+
+      body{
+        position: absolute;
+        width: 100%;
+        background: #F7F7F7;
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        margin: auto;
+      }
+      @media screen and (min-width:600px) {
+        body{
+            position: absolute;
+            width: 100%;
+            background: #F7F7F7;
+            display: flex;
+            flex-flow: column wrap;
+            align-items: center;
+            margin: auto;
+          }
+        }
+
+      form{
+    display: flex;
+    font-family: Open Sans;
+    flex-direction: column;
+    justify-content: flex-end;
+    }
+    @media (min-width: 600px){
+
+form {
+    height: 200px;
+    width: 300px;
+}
+    }
+
+ input{
+        border-radius: 2px;
+        line-height: 25px;
+ }
+
+ #btn-ingresar{
+    position: absolute;
+    width: 100%;
+    max-width: 170px;
+    background: #3897F0;
+    border-radius: 5px;
+    font-family: Open Sans;
+    font-weight: 800;
+    font-size: 15px;
+    line-height: 1px;
+    color: #FFFFFF;
+    justify-content: center;
+    display: flex;
+    padding: 10px 10px 10px 10px;
+ }
+ @media (min-width: 600px){
+ #btn-ingresar {
+     background: #3897F0;
+     border-radius: 5px;
+     font-family: Open Sans;
+     font-weight: 800;
+     font-size: 15px;
+     line-height: 10px;
+     color: #FFFFFF;
+     justify-content: center;
+     display: flex;
+     padding: 10px 0px;
+     max-width: 300px;
+     margin-top: 15px;
+ }
+}
+ #resultado{
+    max-width: 300px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    color: #000000;
+    /* width: 100%; */
+    text-align: center;
+    font-size: 18px;
+ }
+
