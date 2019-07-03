@@ -1,9 +1,8 @@
 header{
     display: flex;
-    width: 89%;
-    padding: 44px;
-    margin: 60px;
-    height: 20%;
+    width: 1030px;
+    margin: auto;
+    height: 300px;
     justify-content: center;
 }
 
@@ -20,15 +19,9 @@ header{
 
 main{
     display: flex;
+    justify-content: center;
+    margin: 49px 60px;
 }
-@media(max-width:600px) {
-    main{
-        display: flex;
-        width:57%;
-        justify-content: center;
-    }
-}
-
 .hide{
     Display:none;
     }
@@ -37,9 +30,11 @@ main{
     background-image: url(./Imagenes/pokedata.png);
     background-repeat: no-repeat;
     background-size: contain;
-    width: 52%;
-    height: 116%;
+    width: 203%;
     background-position: center;
+    margin: 30px 0px 0px 98px;
+    padding: 71px;
+    justify-content: center;
     }
 @media(max-width:600px) {
         #encabezado{
@@ -53,11 +48,12 @@ main{
 #pokebola{
         background-image: url(./Imagenes/pokebola.png);
         background-repeat: no-repeat;
-        width: 14%;
-        background-size: 80%;
-        height: 110%;
-        justify-content: center;
+        width: 59%;
+        background-size: contain;
         background-position: center;
+        margin: 19px 0px 0px 22px;
+        align-content: center;
+        justify-content: flex-end;
     }
 @media(max-width:600px) {
         #pokebola{
@@ -70,20 +66,18 @@ main{
         }
         }
 
-    #contain-login{
+    #login{
         font-family: Open Sans;
         font-style: normal;
         font-weight: normal;
         color: #000000;
         font-size: 25px;
-        justify-content: center;
-        align-content: center;
-        display: flex;
-        width: 105%;
-        height: 67%;
+        width: 390px;
+        height: 531px;
+        flex-direction: column;
     }
     @media(max-width:600px) {
-    #contain-login{
+    #login{
         flex-flow: column;
         font-family: Open Sans;
         font-style: normal;
@@ -101,14 +95,9 @@ main{
 
     body{
         background-image: url(./Imagenes/Fondo.png);
+        background-image: url(./Imagenes/Fondo.png);
         background-size: cover;
-    background-repeat: no-repeat;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    margin: auto;
-    height: 100vh;
-    width: 100%;
+        background-repeat: no-repeat;
     }
       @media screen and (max-width:600px) {
         body{
@@ -130,8 +119,7 @@ main{
             font-family: Open Sans;
             flex-direction: column;
             width: 123%;
-            justify-content: space-between;
-            height: 149%;
+            height: 78%;
         }
         @media (max-width: 600px){
             form {
@@ -153,6 +141,8 @@ main{
         color: #000000;
         font-size: 24px;
         display: flex;
+        height: 64px;
+        margin: 11px 0;
  }
 
 
@@ -193,14 +183,15 @@ main{
     }
 
  #resultado{
-    font-family: Open Sans;
+ font-family: Open Sans;
     font-style: normal;
-    font-weight: normal;
+    font-weight: 600;
     color: black;
-    text-align: center;
+    /* text-align: center; */
     font-size: 22px;
     display: flex;
     width: 100%;
+    justify-content: center;
     }
 
 
@@ -256,4 +247,17 @@ main{
 
     #contain-vista1{
         display: flex;
+    }
+
+
+    .poke{
+    border: red;
+    display:inline-block
+
+    }
+
+    footer{
+        display: flex;
+        width: 1000px;
+        height: 100px;
     }

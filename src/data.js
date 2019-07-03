@@ -1,10 +1,14 @@
-/* Manejo de data */
+const contenedor = document.getElementById('contenedor');
+const pokeData = () => {
+  for (let i = 0; i < POKEMON.pokemon.length; i++) {
+    const num = POKEMON.pokemon[i].num;
+    const nombre = POKEMON.pokemon[i].name;
+    const imagen = POKEMON.pokemon[i].img;
 
-// esta es una función de ejemplo
-// puedes ver como agregamos la función a nuestro objeto global window
-
-const example = () => {
-  return 'example';
+    contenedor.innerHTML += `<div class='poke'>
+    <p> ${num} </p>
+    <p> ${nombre} </p>
+    <img src=" ${imagen}"/>
+    </div>`;
+  }
 };
-
-window.example = example;
