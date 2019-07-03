@@ -5,10 +5,10 @@ const pokeData = () => {
     const nombre = POKEMON.pokemon[i].name;
     const imagen = POKEMON.pokemon[i].img;
 
-    contenedor.innerHTML += `<div class='poke'>
+    contenedor.innerHTML += `<div class='poke' id="poker">
     <p> ${num} </p>
     <p> ${nombre} </p>
     <img src=" ${imagen}"/>
     </div>`;
   }
-};
+}

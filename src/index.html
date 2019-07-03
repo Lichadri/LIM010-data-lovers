@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <header>
+  <header id="header">
     <div id="encabezado"></div>
     <div id="pokebola"></div>
   </header>
@@ -20,38 +20,39 @@
       <form>
         <label for="user">Usuario</label>
         <input type="text" id="usuario" value="LABORATORIA">
-        <label for="contraseña" >Contraseña</label>
-        <input type="password" id="password" placeholder="&#128272"  value="LABORATORIA">
+        <label for="contraseña">Contraseña</label>
+        <input type="password" id="password" placeholder="&#128272" value="LABORATORIA">
         <button type="button" name="button" id="btn-ingresar">Ingresar</button>
         <p id="resultado"></p>
       </form>
       <div id="pikachu"></div>
     </section>
-
-<div id="contain-vista1"></div>
+    
     <section id="vista1" class="vista1 hide">
-        <nav class="navegacion">
-            <ul class="menu">
-              <li><a href="#">Tipo </a></li>
-              <li><a href="#">Debilidad </a></li>
-              <li><a href="#">Huevos </a></li>
-              <li><a href="#">Ordenar</a>
-                <ul class="submenu">
-                  <li><a href="#" value="A-Z">A-Z</a></li>
-                  <li><a href="#" value="Z-A">Z-A</a></li>
-                </ul>
-              </li>
+      <nav class="navegacion">
+        <ul class="menu">
+          <li><a href="#">Tipo </a></li>
+          <li><a href="#">Debilidad </a></li>
+          <li><a href="#">Huevos </a></li>
+          <li><a href="#">Ordenar</a>
+            <ul class="submenu">
+              <li><a href="#" value="A-Z">A-Z</a></li>
+              <li><a href="#" value="Z-A">Z-A</a></li>
             </ul>
-          </nav>
-          <p id="catch">Pokemones</p>
-          <div id="contenedor"></div>
-        
+          </li>
+        </ul>
+      </nav>
+      <h1>Pokemones</h1>
+      <div id="contenedor"></div>
+      <div id="ventana-emergente" class="ventana">ventana</div>
+
+
 
     </section>
   </main>
 
   <footer></footer>
-  <script src="./data/pokemon/pokemon.js"></script> 
+  <script src="./data/pokemon/pokemon.js"></script>
   <script src="data.js"></script>
   <script src="main.js"></script>
 </body> 
