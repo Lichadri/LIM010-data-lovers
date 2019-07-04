@@ -6,7 +6,7 @@ btnIngresar.addEventListener('click', () => {
     if (usuario === claveIngresada && contraseña === claveIngresada) {
         document.getElementById('login').classList.add('hide');
         document.getElementById('vista1').classList.remove('hide');
-        pokeData();
+        mostrarPokemones(POKEMON.pokemon);
     }
 
 
@@ -17,3 +17,5 @@ btnIngresar.addEventListener('click', () => {
 
     }
 });
+
+
