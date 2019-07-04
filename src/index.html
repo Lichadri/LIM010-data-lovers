@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <header id="header">
+  <header class="header-principal">
     <div id="encabezado"></div>
     <div id="pokebola"></div>
   </header>
@@ -29,13 +29,14 @@
     </section>
     
     <section id="vista1" class="vista1 hide">
+       
       <nav class="navegacion">
           <div class="filtrado">
             <select class="form-filtro" name="filtro-orden" id="filtro-orden">
                 <option value="filtro-num" selected># de Pokedex</option>
                 <option value="filtro-az" >A-Z</option>
                 <option value="filtro-za">Z-A</option>
-                <option value="filtro-spawnasc">Spawn </option>
+                <option value="filtro-spawnasc">Spawn ↑</option>
                 <option value="filtro-spawndes">Spawn ↓</option>
                 <option value="filtro-debilidad">Debilidad</option>
             </select>
@@ -63,11 +64,23 @@
 
 
       </nav>
-     
-      <h1>Pokemones</h1>
-      <div id="contenedor"></div>
-      <div id="ventana-emergente" class="ventana">ventana</div>
+      <div id="contador">
+      </div>
 
+      <div id="contenedor"></div>
+     
+      <a href="#modal" id="show-modal">Abrir ventana</a>
+      <aside id="modal" class="modal">
+        <div class="content-modal">
+          <header>
+            <a href="#"class="close-modal">x</a>
+          </header>
+          <article>
+          </article>
+        </div>
+        <a href="#" class="btn-close-modal"></a>
+      </aside>
+     
 
 
     </section>
