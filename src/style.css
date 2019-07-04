@@ -182,7 +182,7 @@ main{
     border-radius: 5px;
     font-family: Open Sans;
     font-weight: 600;
-    font-size: 41px;
+    font-size: 34px;
     color: v#3897F0;
     justify-content: space-around;
     display: flex;
@@ -345,4 +345,31 @@ main{
 
     }
 
+    .menu {
+        padding: 15px 15px;
+      }
+      
+      /*MENU STICKY*/
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        position: sticky;
+        top: 0px;
+        width: 100%;
+        position: -webkit-sticky; /* Safari */
+        z-index: 500;
+      }
+      
+      .filter{
+        align-self: center;
+      }
+      
+      .ordenar{
+        align-self: center;
+      
+        
+      }
     

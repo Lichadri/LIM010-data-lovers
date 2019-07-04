@@ -30,18 +30,40 @@
     
     <section id="vista1" class="vista1 hide">
       <nav class="navegacion">
-        <ul class="menu">
-          <li><a href="#">Tipo </a></li>
-          <li><a href="#">Debilidad </a></li>
-          <li><a href="#">Huevos </a></li>
-          <li><a href="#">Ordenar</a>
-            <ul class="submenu">
-              <li><a href="#" value="A-Z">A-Z</a></li>
-              <li><a href="#" value="Z-A">Z-A</a></li>
-            </ul>
-          </li>
-        </ul>
+          <div class="filtrado">
+            <select class="form-filtro" name="filtro-orden" id="filtro-orden">
+                <option value="filtro-num" selected># de Pokedex</option>
+                <option value="filtro-az" >A-Z</option>
+                <option value="filtro-za">Z-A</option>
+                <option value="filtro-spawnasc">Spawn </option>
+                <option value="filtro-spawndes">Spawn ↓</option>
+                <option value="filtro-debilidad">Debilidad</option>
+            </select>
+
+            <select class="form-filtro" id="filtro-tipo">
+                <option value="todos" selected>Todos</option>
+                <option value="Grass">Hierba</option>
+                <option value="Poison">Veneno</option>
+                <option value="Fire">Fuego</option>
+                <option value="Water">Agua</option>
+                <option value="Normal">Normal</option>
+                <option value="Flying">Volador</option>
+                <option value="Fighting">Lucha</option>
+                <option value="Ground">Tierra</option>
+                <option value="Rock">Roca</option>
+                <option value="Bug">Bicho</option>
+                <option value="Ghost">Fantasma</option>
+                <option value="Psychic">Psíquico</option>
+                <option value="Ice">Hielo</option>
+                <option value="Electric">Eléctrico</option>
+                <option value="Dragon">Dragon</option>
+              </select>
+
+          </div>
+
+
       </nav>
+     
       <h1>Pokemones</h1>
       <div id="contenedor"></div>
       <div id="ventana-emergente" class="ventana">ventana</div>
@@ -55,6 +77,6 @@
   <script src="./data/pokemon/pokemon.js"></script>
   <script src="data.js"></script>
   <script src="main.js"></script>
-</body>
+</body> 
 
 </html>
