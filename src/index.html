@@ -27,62 +27,52 @@
       </form>
       <div id="pikachu"></div>
     </section>
-    
     <section id="vista1" class="vista1 hide">
-       
       <nav class="navegacion">
-          <div class="filtrado">
-            <select class="form-filtro" name="filtro-orden" id="filtro-orden">
-                <option value="filtro-num" selected># de Pokedex</option>
-                <option value="filtro-az" >A-Z</option>
-                <option value="filtro-za">Z-A</option>
-                <option value="filtro-spawnasc">Spawn ↑</option>
-                <option value="filtro-spawndes">Spawn ↓</option>
-                <option value="filtro-debilidad">Debilidad</option>
-            </select>
+        <div class="filtrado">
+          <select class="form-filtro" name="filtro-orden" id="filtro-orden">
+            <option value="filtro-num" selected># de Pokedex</option>
+            <option value="filtro-az">A-Z</option>
+            <option value="filtro-za">Z-A</option>
+            <option value="filtro-spawnasc">Spawn ↑</option>
+            <option value="filtro-spawndes">Spawn ↓</option>
+            <option value="filtro-debilidad">Debilidad</option>
+          </select>
 
-            <select class="form-filtro" id="filtro-tipo">
-                <option value="todos" selected>Todos</option>
-                <option value="Grass">Hierba</option>
-                <option value="Poison">Veneno</option>
-                <option value="Fire">Fuego</option>
-                <option value="Water">Agua</option>
-                <option value="Normal">Normal</option>
-                <option value="Flying">Volador</option>
-                <option value="Fighting">Lucha</option>
-                <option value="Ground">Tierra</option>
-                <option value="Rock">Roca</option>
-                <option value="Bug">Bicho</option>
-                <option value="Ghost">Fantasma</option>
-                <option value="Psychic">Psíquico</option>
-                <option value="Ice">Hielo</option>
-                <option value="Electric">Eléctrico</option>
-                <option value="Dragon">Dragon</option>
-              </select>
-
-          </div>
-
-
+          <select class="form-filtro" id="filtro-tipo">
+            <option value="todos" selected>Todos</option>
+            <option value="Grass">Hierba</option>
+            <option value="Poison">Veneno</option>
+            <option value="Fire">Fuego</option>
+            <option value="Water">Agua</option>
+            <option value="Normal">Normal</option>
+            <option value="Flying">Volador</option>
+            <option value="Fighting">Lucha</option>
+            <option value="Ground">Tierra</option>
+            <option value="Rock">Roca</option>
+            <option value="Bug">Bicho</option>
+            <option value="Ghost">Fantasma</option>
+            <option value="Psychic">Psíquico</option>
+            <option value="Ice">Hielo</option>
+            <option value="Electric">Eléctrico</option>
+            <option value="Dragon">Dragon</option>
+          </select>
+        </div>
       </nav>
       <div id="contador">
       </div>
-
       <div id="contenedor"></div>
-     
-      <a href="#modal" id="show-modal">Abrir ventana</a>
-      <aside id="modal" class="modal">
-        <div class="content-modal">
-          <header>
-            <a href="#"class="close-modal">x</a>
-          </header>
-          <article>
-          </article>
+      <!-- The Modal -->
+      <div id="my-modal" class="modal hide">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close" id="close">&times;</span>
+          <p>Informacion de Pokemon</p>
+          <div class="modal-info" id="modal-info">
+          </div>
         </div>
-        <a href="#" class="btn-close-modal"></a>
-      </aside>
-     
-
-
+      </div>
     </section>
   </main>
 
@@ -90,6 +80,6 @@
   <script src="./data/pokemon/pokemon.js"></script>
   <script src="data.js"></script>
   <script src="main.js"></script>
-</body> 
+</body>
 
 </html>
