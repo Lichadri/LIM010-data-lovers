@@ -1,6 +1,6 @@
 const filterOrder = document.getElementById('filtro-orden');
 const filterType = document.getElementById('filtro-tipo');
-//funcion que espera que se seleccione algun filtro
+// funcion que espera que se seleccione algun filtro
 filterOrder.addEventListener('change', () => {
   ordenar();
 });
@@ -8,11 +8,11 @@ filterType.addEventListener('change', () => {
   ordenar();
 });
 
-//funcion ordenar
+// funcion ordenar
 const ordenar = () => {
   const pokemonesFiltrados = POKEMON.pokemon;
   mostrarPokemones(pokemonesFiltrados);
-}
+};
 const contenedor = document.getElementById('contenedor');
 const mostrarPokemones = (data) => {
   for (let i = 0; i < data.length; i++) {
@@ -26,22 +26,19 @@ const mostrarPokemones = (data) => {
     <img src="${imagen}"/>
     </div>`;
   }
-}
+};
 
-const atrapados=document.getElementById("contador");
+const atrapados = document.getElementById('contador');
 let contAtrapados = 0;
 let contNoAtrapados = 0;
 for (let i = 0; i < POKEMON.pokemon.length; i++) {
- if (POKEMON.pokemon[i].multipliers === null) {
-   contNoAtrapados ++;
- } else {
-   contAtrapados = 148 - contNoAtrapados;
- }
+  if (POKEMON.pokemon[i].multipliers === null) {
+    contNoAtrapados++;
+  } else {
+    contAtrapados = 148 - contNoAtrapados;
+  }
 
- atrapados.innerHTML = `<div>
+  atrapados.innerHTML = `<div>
      ${contAtrapados}    ${contNoAtrapados}
      </div>`;
 };
-
-
-
