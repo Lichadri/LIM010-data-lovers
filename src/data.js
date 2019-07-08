@@ -1,7 +1,7 @@
 /* Asignar contenedor a variable */
 const contenedor = document.getElementById('contenedor');
 
-/* FUCNION DE MOSTRAR POKEMONES */
+/* Funcion de mostrar pokemones*/
 const mostrarPokemones = (data) => {
   for (let i = 0; i < data.length; i++) {
     const num = data[i].num;
@@ -15,39 +15,7 @@ const mostrarPokemones = (data) => {
     <img src="${imagen}"/>
     </div>`;
   }
-
-  // crear array con pokemones que han sido mostrados con variable pokemon dentro del contenedor
-  pokemon = document.getElementsByName('pokemon');
-
-
-  /* EVENTO PARA SABER CUAL SE HIZO click */
-  for (var i = 0; i < pokemon.length; i++) {
-    if (pokemon[i].getAttribute('name') === 'pokemon') {
-      /* si hace click */
-      pokemon[i].addEventListener('click', () => {
-        console.log(event);
-        // se obtine el id del padre de la imagen
-        // se quita 1 para que coincida con array
-        const numero = parseInt(event.target.parentElement.id) - 1 ;
-        // Mostrar modal
-        document.getElementById('my-modal').classList.remove('hide');
-        // Insertar datos en Modal
-        document.getElementById('modal-info').innerHTML = `
-        <img class="imagenModal" src="${POKEMON.pokemon[numero].img}"/>
-        <p> ${POKEMON.pokemon[numero].num}  ${POKEMON.pokemon[numero].name}</p>
-        <p>Peso: ${POKEMON.pokemon[numero].weight}   </p> 
-        <p>Altura: ${POKEMON.pokemon[numero].height}</p>    
-        <p>Tipo: ${POKEMON.pokemon[numero].type}</p>
-        `;
-      });
-    };
-  }
 };
-
-/* cerrar Modal */
-document.getElementById('close').addEventListener('click', () => {
-  document.getElementById('my-modal').classList.add('hide');
-});
 
 const atrapados = document.getElementById('contador');
 let contAtrapados = 0;
@@ -63,4 +31,28 @@ for (let i = 0; i < POKEMON.pokemon.length; i++) {
      ${contAtrapados}    ${contNoAtrapados}
      </div>`;
 };
+
+/* cerrar Modal */
+ document.getElementById('close').addEventListener('click', () => {
+ document.getElementById('my-modal').classList.add('hide');
+});
+
+/* Obtengo todo el contenedor donde estan los pokemones y agrego un evento clik*/
+document.getElementById('contenedor').addEventListener('click',()=>{
+/* Capturo el Id del pokemon que realizo evento en variable numero, se obtine el id del padre
+y le quito 1 para que coincida con el array */
+const numero = parseInt(event.target.parentElement.id)-1;
+/* Pongo condicional que si el atributo name  del padre de ese elemento es pokemon, muestra modal e inserta datos del pokemon*/
+if (event.target.parentElement.getAttribute('name') === 'pokemon') {
+  /* Muestra modal*/
+document.getElementById('my-modal').classList.remove('hide');
+/* Insertar info de pokemon en Modal*/
+ document.getElementById('modal-info').innerHTML = `
+<img class="imagenModal" src="${POKEMON.pokemon[numero].img}"/>
+<p> Nombre:  ${POKEMON.pokemon[numero].name}</p>
+ <p>Peso: ${POKEMON.pokemon[numero].weight}   </p> 
+<p>Altura: ${POKEMON.pokemon[numero].height}</p>    
+<p>Tipo: ${POKEMON.pokemon[numero].type}</p> `;
+}
+});
 
