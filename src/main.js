@@ -13,4 +13,3 @@ btnIngresar.addEventListener('click', () => {
     document.getElementById('usuario').focus();
   }
 });
-

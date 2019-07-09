@@ -21,14 +21,14 @@ const mostrarPokemones = (data) => {
 
 
   /* EVENTO PARA SABER CUAL SE HIZO click */
-  for (var i = 0; i < pokemon.length; i++) {
+  for (let i = 0; i < pokemon.length; i++) {
     if (pokemon[i].getAttribute('name') === 'pokemon') {
       /* si hace click */
       pokemon[i].addEventListener('click', () => {
         console.log(event);
         // se obtine el id del padre de la imagen
         // se quita 1 para que coincida con array
-        const numero = parseInt(event.target.parentElement.id) - 1 ;
+        const numero = parseInt(event.target.parentElement.id) - 1;
         // Mostrar modal
         document.getElementById('my-modal').classList.remove('hide');
         // Insertar datos en Modal
@@ -63,4 +63,3 @@ for (let i = 0; i < POKEMON.pokemon.length; i++) {
      ${contAtrapados}    ${contNoAtrapados}
      </div>`;
 };
-
