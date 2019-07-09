@@ -30,15 +30,13 @@
     <section id="vista1" class="vista1 hide">
       <nav class="navegacion">
         <div class="filtrado">
-          <select class="form-filtro" name="filtro-orden" id="filtro-orden">
-            <option value="filtro-num" selected># de Pokedex</option>
-            <option value="filtro-az">A-Z</option>
-            <option value="filtro-za">Z-A</option>
-            <option value="filtro-spawnasc">Spawn ↑</option>
-            <option value="filtro-spawndes">Spawn ↓</option>
-            <option value="filtro-debilidad">Debilidad</option>
+          <select class="form-filtro" id="ordenar-por">
+            <option value="disabled" selected>Ordenar por</option>
+            <option value="az">A - Z</option>
+            <option value="za">Z - A</option>
+            <option value="spawnmas">Aparece más</option>
+            <option value="spawnmenos">Aparece menos</option>
           </select>
-
           <select class="form-filtro" id="filtro-tipo">
             <option value="todos" selected>Todos</option>
             <option value="Grass">Hierba</option>
