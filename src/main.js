@@ -67,6 +67,23 @@ document.getElementById('close').addEventListener('click', () => {
 /* Agregar evento ordenar*/
 const ordernarPor = document.getElementById('ordenar-por');
 ordernarPor.addEventListener('change', () => {
-  const condicion = document.getElementById('ordenar-por').value;
-  ordenar(condicion);
+  const condicion = ordernarPor.value;
+  const pokemonesOrdenados = ordenar(condicion);
+  mostrarPokemones(pokemonesOrdenados);
+});
+
+/* Agregar evento filtrar*/
+const filtrarTipo = document.getElementById('filtrar-por');
+filtrarTipo.addEventListener('change', () => {
+  const filtroSeleccionado = filtrarTipo.value;
+  const pokemonesFiltrados = filtrar(filtroSeleccionado);
+  mostrarPokemones(pokemonesFiltrados);
+});
+
+/* Agregar evento para filtrar debilidad */
+const filtrarDebilidad = document.getElementById('Debilidad');
+filtrarDebilidad.addEventListener('change', () => {
+  const filtroDebilidad = filtrarDebilidad.value;
+  const pokemonesDebilidad = debilidad(filtroDebilidad);
+  mostrarPokemones(pokemonesDebilidad);
 });

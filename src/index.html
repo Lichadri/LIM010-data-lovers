@@ -30,35 +30,54 @@
     <section id="vista1" class="vista1 hide">
       <nav class="navegacion">
         <div class="filtrado">
-          <select class="form-filtro" id="ordenar-por">
-            <option value="disabled" selected>Ordenar por</option>
+          <select id="ordenar-por" class="form-filtro">
+            <option value="" disabled selected>Ordenar por</option>
             <option value="az">A - Z</option>
             <option value="za">Z - A</option>
             <option value="spawnmas">Aparece más</option>
             <option value="spawnmenos">Aparece menos</option>
           </select>
-          <select class="form-filtro" id="filtro-tipo">
-            <option value="todos" selected>Todos</option>
-            <option value="Grass">Hierba</option>
-            <option value="Poison">Veneno</option>
-            <option value="Fire">Fuego</option>
+          <select id="filtrar-por" class="form-filtro">
+            <option value="" selected>Tipo</option>
             <option value="Water">Agua</option>
-            <option value="Normal">Normal</option>
-            <option value="Flying">Volador</option>
-            <option value="Fighting">Lucha</option>
-            <option value="Ground">Tierra</option>
-            <option value="Rock">Roca</option>
             <option value="Bug">Bicho</option>
-            <option value="Ghost">Fantasma</option>
-            <option value="Psychic">Psíquico</option>
-            <option value="Ice">Hielo</option>
+            <option value="Dragon">Dragón</option>
             <option value="Electric">Eléctrico</option>
-            <option value="Dragon">Dragon</option>
+            <option value="Ghost">Fantasma</option>
+            <option value="Fire">Fuego</option>
+            <option value="Ice">Hielo</option>
+            <option value="Fighting">Lucha</option>
+            <option value="Normal">Normal</option>
+            <option value="Grass">Planta</option>
+            <option value="Psychic">Psíquico</option>
+            <option value="Rock">Roca</option>
+            <option value="Ground">Tierra</option>
+            <option value="Poison">Veneno</option>
+            <option value="Flying">Volador</option>
+          </select>
+          <select id="Debilidad" class="form-filtro">
+            <option value="0" selected disabled>Debilidad</option>
+            <option value="Water">Agua</option>
+            <option value="Bug">Bicho</option>
+            <option value="Dragon">Dragón</option>
+            <option value="Electric">Eléctrico</option>
+            <option value="Ghost">Fantasma</option>
+            <option value="Fire">Fuego</option>
+            <option value="Ice">Hielo</option>
+            <option value="Fighting">Lucha</option>
+            <option value="Normal">Normal</option>
+            <option value="Grass">Planta</option>
+            <option value="Psychic">Psíquico</option>
+            <option value="Rock">Roca</option>
+            <option value="Ground">Tierra</option>
+            <option value="Poison">Veneno</option>
+            <option value="Flying">Volador</option>
+            <option value="Dark">Dark</option>
+            <option value="Fairy">Fairy</option>
+            <option value="Steel">Steel</option>
           </select>
         </div>
       </nav>
-      <div id="contador">
-      </div>
       <div id="contenedor"></div>
       <!-- The Modal -->
       <div id="my-modal" class="modal hide">

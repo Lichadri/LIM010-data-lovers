@@ -1,9 +1,7 @@
 
 /* Funcion ordenar */
 const ordenar = (condicion) => {
-
-  /* Ordenar A-Z */
-  if (condicion == 'az') {
+  if (condicion === 'az') {
     const pokeOrdenados = POKEMON.pokemon.sort((primero, segundo) => {
       if (primero.name > segundo.name) {
         return 1;
@@ -13,11 +11,8 @@ const ordenar = (condicion) => {
       }
       return 0;
     });
-    mostrarPokemones(pokeOrdenados);
-  }
-
-  /* Ordenar Z-A */
-  else if (condicion == 'za') {
+    return pokeOrdenados;
+  } else if (condicion === 'za') {
     const pokeOrdenados = POKEMON.pokemon.sort((primero, segundo) => {
       if (primero.name < segundo.name) {
         return 1;
@@ -27,23 +22,32 @@ const ordenar = (condicion) => {
       }
       return 0;
     });
-    mostrarPokemones(pokeOrdenados);
-  }
-
-  /* Ordenar aparece mas */
-  else if (condicion == 'spawnmas') {
+    return pokeOrdenados;
+  } else if (condicion === 'spawnmas') {
     const pokeOrdenados = POKEMON.pokemon.sort((primero, segundo) => {
       return segundo.spawn_chance - primero.spawn_chance;
     });
-    mostrarPokemones(pokeOrdenados);
-  }
-
-  /* Ordenar aparece menos */
-  else if (condicion == 'spawnmenos') {
+    return pokeOrdenados;
+  } else if (condicion === 'spawnmenos') {
     const pokeOrdenados = POKEMON.pokemon.sort((primero, segundo) => {
       return primero.spawn_chance - segundo.spawn_chance;
     });
-    mostrarPokemones(pokeOrdenados);
+    return pokeOrdenados;
   }
 };
 
+/* Funcion filtrar tipo */
+const filtrar = (filtroSeleccionado) => {
+  const PokeFiltrados = POKEMON.pokemon.filter((condicion) => {
+    return condicion.type.indexOf(filtroSeleccionado) > -1;
+  });
+  return PokeFiltrados;
+};
+
+/* Funcion filtrar debilidad */
+const debilidad = (filtroDebilidad) => {
+  const PokeDebilidad = POKEMON.pokemon.filter((condicion) => {
+    return condicion.weaknesses.indexOf(filtroDebilidad) > -1;
+  });
+  return PokeDebilidad;
+};
