@@ -349,9 +349,8 @@ main{
       select{
           width: 20px;
       }
-      footer{
+      .footer{
         display: flex;
-        width: 1000px;
-        height: 100px;
-    }
+        justify-content: center;
+      }
 
