@@ -1,15 +1,20 @@
-
-/* Login*/
+/* variables */
+const dataCopiada = POKEMON.pokemon.slice(0, 150);
 const claveIngresada = 'LABORATORIA';
 const btnIngresar = document.getElementById('btn-ingresar');
+const ordernarPor = document.getElementById('ordenar-por');
+const filtrarTipo = document.getElementById('filtrar-por');
+const filtrarDebilidad = document.getElementById('debilidad');
+const filtrarHuevos = document.getElementById('huevos');
+
+/* Login */
 btnIngresar.addEventListener('click', () => {
   const usuario = document.getElementById('usuario').value;
   const contraseña = document.getElementById('password').value;
   if (usuario === claveIngresada && contraseña === claveIngresada) {
     document.getElementById('login').classList.add('hide');
     document.getElementById('vista1').classList.remove('hide');
-
-    /* Mostrar data completa al inicio */
+    const contenedor = document.getElementById('contenedor');
     mostrarPokemones(POKEMON.pokemon);
   } else {
     document.getElementById('resultado').innerHTML = 'Usuario o  contraseña incorrecta';
@@ -18,7 +23,7 @@ btnIngresar.addEventListener('click', () => {
   }
 });
 
-/* Funcion de mostrar pokemones*/
+/* Mostrar pokemones*/
 const mostrarPokemones = (arrayPokemones) => {
   contenedor.innerHTML = '';
   for (let i = 0; i < arrayPokemones.length; i++) {
@@ -35,45 +40,39 @@ const mostrarPokemones = (arrayPokemones) => {
   }
 };
 
-/* Funcion para ventana emergente */
-const contenedor = document.getElementById('contenedor');
-
-/* al contenedor le agrego un evento clik*/
+/* Modal */
 contenedor.addEventListener('click', () => {
   /* Capturo el Id del pokemon que realizo evento en variable numero, se obtine el id del padre
   y le quito 1 para que coincida con el array */
-  const poke = event.target.parentElement.id - 1;
-
+  const poke = parseInt(event.target.parentElement.id - 1);
   /* Pongo condicional que si el atributo name  del padre de ese elemento es pokemon, 
   muestra modal e inserta datos del pokemon */
   if (event.target.parentElement.getAttribute('name') === 'pokemon') {
-    /* Evento mostrar modal*/
+    /* Mostrar modal*/
     document.getElementById('my-modal').classList.remove('hide');
-
     /* Insertar informacion de pokemon en Modal */
     document.getElementById('modal-info').innerHTML = `
-<img class="imagenModal" src="${POKEMON.pokemon[poke].img}"/>
-<p> Nombre:  ${POKEMON.pokemon[poke].name}</p>
- <p>Peso: ${POKEMON.pokemon[poke].weight}   </p> 
-<p>Altura: ${POKEMON.pokemon[poke].height}</p>    
-<p>Tipo: ${POKEMON.pokemon[poke].type}</p> `;
+<img class="imagenModal" src="${dataCopiada[poke].img}"/>
+<p> Nombre:  ${dataCopiada[poke].name}</p>
+ <p>Peso: ${dataCopiada[poke].weight}   </p> 
+<p>Altura: ${dataCopiada[poke].height}</p>    
+<p>Tipo: ${dataCopiada[poke].type}</p> `;
   }
 });
+
 /* Evento cerrar Modal */
 document.getElementById('close').addEventListener('click', () => {
   document.getElementById('my-modal').classList.add('hide');
 });
 
-/* Agregar evento ordenar*/
-const ordernarPor = document.getElementById('ordenar-por');
+/* Agregar evento para ordenar de a-z, z-a, pokedex, aparecen mas y aparecen menos*/
 ordernarPor.addEventListener('change', () => {
   const condicion = ordernarPor.value;
   const pokemonesOrdenados = ordenar(condicion);
   mostrarPokemones(pokemonesOrdenados);
 });
 
-/* Agregar evento filtrar*/
-const filtrarTipo = document.getElementById('filtrar-por');
+/* Agregar evento para filtrar tipo*/
 filtrarTipo.addEventListener('change', () => {
   const filtroSeleccionado = filtrarTipo.value;
   const pokemonesFiltrados = filtrar(filtroSeleccionado);
@@ -81,9 +80,20 @@ filtrarTipo.addEventListener('change', () => {
 });
 
 /* Agregar evento para filtrar debilidad */
-const filtrarDebilidad = document.getElementById('Debilidad');
 filtrarDebilidad.addEventListener('change', () => {
   const filtroDebilidad = filtrarDebilidad.value;
   const pokemonesDebilidad = debilidad(filtroDebilidad);
   mostrarPokemones(pokemonesDebilidad);
 });
+
+/* Agregar evento para filtrar huevos*/
+filtrarHuevos.addEventListener('change', () => {
+  const filtroHuevos = filtrarHuevos.value;
+  const pokemonesHuevos = huevos(filtroHuevos);
+  mostrarPokemones(pokemonesHuevos);
+//   /* Agregar porcentajes*/
+//   const porcentajeHuevo = (huevos(POKEMON.pokemon).length) * 1.51;
+// contador.classList.remove('hide');
+// contador.innerHTML= porcentajeHuevo;
+});
+
