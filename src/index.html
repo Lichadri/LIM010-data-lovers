@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Data Lovers</title>
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -36,9 +36,10 @@
             <option value="za">Z - A</option>
             <option value="spawnmas">Aparece más</option>
             <option value="spawnmenos">Aparece menos</option>
+            <option value="pokedex">Pokedex</option>
           </select>
           <select id="filtrar-por" class="form-filtro">
-            <option value="" selected>Tipo</option>
+            <option value="" disabled selected>Tipo</option>
             <option value="Water">Agua</option>
             <option value="Bug">Bicho</option>
             <option value="Dragon">Dragón</option>
@@ -55,7 +56,7 @@
             <option value="Poison">Veneno</option>
             <option value="Flying">Volador</option>
           </select>
-          <select id="Debilidad" class="form-filtro">
+          <select id="debilidad" class="form-filtro">
             <option value="0" selected disabled>Debilidad</option>
             <option value="Water">Agua</option>
             <option value="Bug">Bicho</option>
@@ -76,8 +77,16 @@
             <option value="Fairy">Fairy</option>
             <option value="Steel">Steel</option>
           </select>
+          <select id="huevos" class="form-filtro">
+            <option value="0" selected disabled>Egg</option>
+            <option value="2 km">2 km</option>
+            <option value="5 km">5 km</option>
+            <option value="7 km">7 km</option>
+            <option value="Not in Eggs">Not in Eggs</option>
+          </select>
         </div>
       </nav>
+      <div id="contador" class="contador hide"></div>
       <div id="contenedor"></div>
       <!-- The Modal -->
       <div id="my-modal" class="modal hide">
@@ -93,7 +102,9 @@
     </section>
   </main>
 
-  <footer></footer>
+  <footer>
+      <p>PokeData 2019 Copyright © Leslye & Adriana </p>
+  </footer>
   <script src="./data/pokemon/pokemon.js"></script>
   <script src="data.js"></script>
   <script src="main.js"></script>

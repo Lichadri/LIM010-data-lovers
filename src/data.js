@@ -1,4 +1,3 @@
-
 /* Funcion ordenar */
 const ordenar = (condicion) => {
   if (condicion === 'az') {
@@ -33,6 +32,11 @@ const ordenar = (condicion) => {
       return primero.spawn_chance - segundo.spawn_chance;
     });
     return pokeOrdenados;
+  } else if (condicion === 'pokedex') {
+    const pokeOrdenados = POKEMON.pokemon.sort((primero, segundo) => {
+      return primero.num - segundo.num;
+    });
+    return pokeOrdenados;
   }
 };
 
@@ -51,3 +55,17 @@ const debilidad = (filtroDebilidad) => {
   });
   return PokeDebilidad;
 };
+
+/* Funcion filtrar huevos */
+const huevos = (filtroHuevos) => {
+  const PokeHuevos = POKEMON.pokemon.filter((condicion) => {
+    return condicion.egg.indexOf(filtroHuevos) > -1;
+  });
+  return PokeHuevos;
+};
+
+window.ordenar = ordenar;
+window.filtrar = filtrar;
+window.debilidad = debilidad;
+window.huevos = huevos;
+
