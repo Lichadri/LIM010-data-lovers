@@ -1,4 +1,5 @@
 /* variables */
+const pokedata = POKEMON.pokemon;
 const dataCopiada = POKEMON.pokemon.slice(0, 150);
 const claveIngresada = 'LABORATORIA';
 const btnIngresar = document.getElementById('btn-ingresar');
@@ -75,25 +76,41 @@ ordernarPor.addEventListener('change', () => {
 /* Agregar evento para filtrar tipo*/
 filtrarTipo.addEventListener('change', () => {
   const filtroSeleccionado = filtrarTipo.value;
-  const pokemonesFiltrados = filtrar(filtroSeleccionado);
+  const pokemonesFiltrados = filtrar(filtroSeleccionado, pokedata);
   mostrarPokemones(pokemonesFiltrados);
 });
 
 /* Agregar evento para filtrar debilidad */
 filtrarDebilidad.addEventListener('change', () => {
   const filtroDebilidad = filtrarDebilidad.value;
-  const pokemonesDebilidad = debilidad(filtroDebilidad);
+  const pokemonesDebilidad = debilidad(filtroDebilidad, pokedata);
   mostrarPokemones(pokemonesDebilidad);
 });
 
 /* Agregar evento para filtrar huevos*/
 filtrarHuevos.addEventListener('change', () => {
   const filtroHuevos = filtrarHuevos.value;
-  const pokemonesHuevos = huevos(filtroHuevos);
+  const pokemonesHuevos = huevos(filtroHuevos, pokedata);
   mostrarPokemones(pokemonesHuevos);
-//   /* Agregar porcentajes*/
-//   const porcentajeHuevo = (huevos(POKEMON.pokemon).length) * 1.51;
-// contador.classList.remove('hide');
-// contador.innerHTML= porcentajeHuevo;
+  /* Agregar porcentajes*/
+  porcentaje.classList.remove('hide');
+  porcentaje.innerHTML = `Pokemones que nacen de huevos de  ${filtrarHuevos.value} corresponden al ${((pokemonesHuevos.length) / 151 * 100).toFixed(2)}% de la region Kanto`;
+  console.log(filtrarHuevos);
 });
 
+/* Agregar evento para pokedex*/
+btnPokedex.addEventListener('click', () => {
+  ordernarPor.value = '';
+  filtrarTipo.value = '';
+  filtrarDebilidad.value = '';
+  filtrarHuevos.value = '';
+  porcentaje.innerHTML = '';
+  const filtroPokedex = ordenar('pokedex');
+  mostrarPokemones(filtroPokedex);
+});
+
+/* Agregar evento para salir*/
+btnSalir.addEventListener('click', () => {
+  document.getElementById('vista1').classList.add('hide');
+  document.getElementById('login').classList.remove('hide');
+});

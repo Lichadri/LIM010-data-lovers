@@ -19,9 +19,9 @@
     <section id="login" class="login">
       <form>
         <label for="user">Usuario</label>
-        <input type="text" id="usuario" value="LABORATORIA">
+        <input type="text" id="usuario" value="">
         <label for="contraseña">Contraseña</label>
-        <input type="password" id="password" placeholder="&#128272" value="LABORATORIA">
+        <input type="password" id="password" placeholder="&#128272" value="">
         <button type="button" name="button" id="btn-ingresar">Ingresar</button>
         <p id="resultado"></p>
       </form>
@@ -57,7 +57,7 @@
             <option value="Flying">Volador</option>
           </select>
           <select id="debilidad" class="form-filtro">
-            <option value="0" selected disabled>Debilidad</option>
+            <option value="" selected disabled>Debilidad</option>
             <option value="Water">Agua</option>
             <option value="Bug">Bicho</option>
             <option value="Dragon">Dragón</option>
@@ -78,15 +78,17 @@
             <option value="Steel">Steel</option>
           </select>
           <select id="huevos" class="form-filtro">
-            <option value="0" selected disabled>Egg</option>
+            <option value="" selected disabled>Egg</option>
             <option value="2 km">2 km</option>
             <option value="5 km">5 km</option>
             <option value="7 km">7 km</option>
             <option value="Not in Eggs">Not in Eggs</option>
           </select>
+          <button id= "btnPokedex" name="pokedex" class="form-filtro"># de Pokedex</button>
+          <button id= "btnSalir" name="salir" class="form-filtro"> Salir </button>
         </div>
       </nav>
-      <div id="contador" class="contador hide"></div>
+      <div id="porcentaje" class="porcentaje hide"></div>
       <div id="contenedor"></div>
       <!-- The Modal -->
       <div id="my-modal" class="modal hide">

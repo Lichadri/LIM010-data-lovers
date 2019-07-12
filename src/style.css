@@ -222,7 +222,6 @@ main{
 @media (max-width:600px) {
     #pikachu{
         background-image: url(./Imagenes/pikachu.gif);
-        background-image: url(./Imagenes/pikachu.gif);
         background-repeat: no-repeat;
         background-size: contain;
         /* background-position: center; */
@@ -256,12 +255,11 @@ main{
         }
 
     .navegacion{
-    background: linear-gradient(180deg, rgba(216, 170, 170, 0.15) 0%, rgba(255, 255, 255, 0) 100%);
+        background: rgb(98, 40, 16, 0.25);
     justify-content: flex-start;
     height: auto;
-    /* position: absolute; */
-    margin: 0px 3px 0px 74px;
-    padding: 0px 0px 1px 89px;
+    margin: 0px 0px 0px 0px;
+    padding: 9px 0px 10px 282px;
     }
    
 #contenedor{
@@ -316,7 +314,6 @@ p{
     color: white;
   }
 
-  /* Modal Content/Box */
   .modal-content {
     font-size: 27px;
     margin: 10% auto;
@@ -396,3 +393,11 @@ p{
         display: initial;
       }
        */
+
+       .porcentaje{
+        text-align: center;
+        color:#112D5D;
+        font-weight: 600;
+        font-size: 29px;
+        margin: 45px 90px 3px 0px;
+       }
