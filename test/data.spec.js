@@ -39,28 +39,15 @@ describe('filtrar', () => {
   it('debería ser una función', () => {
     expect(typeof filtrar).toBe('function');
   });
- 
-  it('debería retornar tipo', () => {
-    expect(filtrar('Bug', pokemon)[0].type).toEqual(['Bug']);
-  });
-});
+  
 
-describe('debilidad', () => {
+describe('ordenar', () => {
   it('debería ser una función', () => {
-    expect(typeof debilidad).toBe('function');
+    expect(typeof example). toBe('function');
   });
- 
-  it('debería retornar debilidad', () => {
-    expect(debilidad('Rock', pokemon)[0].weaknesses).toEqual(['Fire', 'Flying', 'Rock']);
-  });
-});
 
-describe('huevos', () => {
-  it('debería ser una función', () => {
-    expect(typeof huevos).toBe('function');
-  });
- 
-  it('debería retornar huevos', () => {
-    expect(huevos('2 km', pokemon)[0].egg).toEqual('2 km');
+  it('debería retornar "example"', () => {
+    expect(typeof example().toBe('string');
+    expect(example('example')).toBe('EXAMPLE')
   });
 });
