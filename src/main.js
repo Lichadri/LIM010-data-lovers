@@ -7,6 +7,8 @@ const ordernarPor = document.getElementById('ordenar-por');
 const filtrarTipo = document.getElementById('filtrar-por');
 const filtrarDebilidad = document.getElementById('debilidad');
 const filtrarHuevos = document.getElementById('huevos');
+const btnPokedex = document.getElementById('btn-pokedex');
+const btnSalir = document.getElementById('btn-salir');
 
 /* Login */
 btnIngresar.addEventListener('click', () => {
