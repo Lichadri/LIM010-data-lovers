@@ -1,13 +1,13 @@
 /* variables */
 const pokedata = POKEMON.pokemon;
 const dataCopiada = POKEMON.pokemon.slice(0, 150);
-const claveIngresada = 'LABORATORIA';
+const claveIngresada = '';
 const btnIngresar = document.getElementById('btn-ingresar');
 const ordernarPor = document.getElementById('ordenar-por');
 const filtrarTipo = document.getElementById('filtrar-por');
 const filtrarDebilidad = document.getElementById('debilidad');
 const filtrarHuevos = document.getElementById('huevos');
-const btnPokedex = document.getElementById('btn-pokedex');
+const btnPokedex = document.getElementById('pokedex');
 const btnSalir = document.getElementById('btn-salir');
 
 /* Login */
@@ -38,7 +38,7 @@ const mostrarPokemones = (arrayPokemones) => {
     <div class='poke' name='pokemon' id=${id}>
     <p> ${num} </p>
     <p> ${nombre} </p>
-    <img src="${imagen}"/>
+    <img class='img-pokemon' src='${imagen}'/>
     </div>`;
   }
 };
@@ -71,7 +71,7 @@ document.getElementById('close').addEventListener('click', () => {
 /* Agregar evento para ordenar de a-z, z-a, pokedex, aparecen mas y aparecen menos*/
 ordernarPor.addEventListener('change', () => {
   const condicion = ordernarPor.value;
-  const pokemonesOrdenados = ordenar(condicion);
+  const pokemonesOrdenados = ordenar(condicion, pokedata);
   mostrarPokemones(pokemonesOrdenados);
 });
 

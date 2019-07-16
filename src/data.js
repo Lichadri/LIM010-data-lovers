@@ -1,39 +1,36 @@
 /* Funcion ordenar */
-const ordenar = (condicion) => {
+
+const ordenar = (condicion, array) => {
   if (condicion === 'az') {
-    const pokeOrdenados = pokedata.sort((primero, segundo) => {
+    const pokeOrdenados = array.sort((primero, segundo) => {
       if (primero.name > segundo.name) {
         return 1;
-      }
-      if (primero.name < segundo.name) {
+      } else if (primero.name < segundo.name) {
         return -1;
       }
-      return 0;
     });
     return pokeOrdenados;
   } else if (condicion === 'za') {
-    const pokeOrdenados = pokedata.sort((primero, segundo) => {
+    const pokeOrdenados = array.sort((primero, segundo) => {
       if (primero.name < segundo.name) {
         return 1;
-      }
-      if (primero.name > segundo.name) {
+      } else if (primero.name > segundo.name) {
         return -1;
       }
-      return 0;
     });
     return pokeOrdenados;
   } else if (condicion === 'spawnmas') {
-    const pokeOrdenados = pokedata.sort((primero, segundo) => {
-      return segundo.spawn_chance - primero.spawn_chance;
+    const pokeOrdenados = array.sort((primero, segundo) => {
+      return segundo.avg_spawns - primero.avg_spawns;
     });
     return pokeOrdenados;
   } else if (condicion === 'spawnmenos') {
-    const pokeOrdenados = pokedata.sort((primero, segundo) => {
-      return primero.spawn_chance - segundo.spawn_chance;
+    const pokeOrdenados = array.sort((primero, segundo) => {
+      return primero.avg_spawns - segundo.avg_spawns;
     });
     return pokeOrdenados;
   } else if (condicion === 'pokedex') {
-    const pokeOrdenados = pokedata.sort((primero, segundo) => {
+    const pokeOrdenados = array.sort((primero, segundo) => {
       return primero.num - segundo.num;
     });
     return pokeOrdenados;
@@ -68,4 +65,3 @@ window.ordenar = ordenar;
 window.filtrar = filtrar;
 window.debilidad = debilidad;
 window.huevos = huevos;
-
