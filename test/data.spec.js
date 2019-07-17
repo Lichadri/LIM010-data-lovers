@@ -96,11 +96,16 @@ describe('ordenar', () => {
   it('debería ser una función', () => {
     expect(typeof ordenar).toBe('function');
   });
-
-  it('debería retornar de az', () => {
+  it('deberia retornar un nuevo array de objetos ordenados', () => {
+    expect(Array.isArray(ordenar('az', pokemon))).toBe(true);
+  });
+  // it('deberia no modifcar el array original', () => {
+  //   expect(ordenar('az', pokemon)).not.toBe(pokemon);
+  // });
+  it('debería retornar un array de objetos con los pokemones ordenados por el nombre de A-Z', () => {
     expect(ordenar('az', pokemon)[0].name).toEqual('Caterpie');
   });
-  it('debería retornar de za', () => {
+  it('debería retornar un array de objetos con los pokemones ordenados por el nombre de Z-A', () => {
     expect(ordenar('za', pokemon)[0].name).toEqual('Ekans');
   });
   it('debería retornar de spawnmas', () => {
