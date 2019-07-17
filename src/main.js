@@ -1,7 +1,7 @@
 /* variables */
 const pokedata = POKEMON.pokemon;
 const dataCopiada = POKEMON.pokemon.slice(0, 150);
-const claveIngresada = '';
+const claveIngresada = 'LABORATORIA';
 const btnIngresar = document.getElementById('btn-ingresar');
 const ordernarPor = document.getElementById('ordenar-por');
 const filtrarTipo = document.getElementById('filtrar-por');
