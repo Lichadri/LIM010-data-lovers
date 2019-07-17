@@ -3,22 +3,14 @@
 const ordenar = (condicion, array) => {
   if (condicion === 'az') {
     const pokeOrdenados = array.sort((primero, segundo) => {
-      if (primero.name > segundo.name) {
-        return 1;
-      } else if (primero.name < segundo.name) {
-        return -1;
-      }
+      return (primero.name < segundo.name) * (-1);
     });
     return pokeOrdenados;
   } else if (condicion === 'za') {
     const pokeOrdenados = array.sort((primero, segundo) => {
-      if (primero.name < segundo.name) {
-        return 1;
-      } else if (primero.name > segundo.name) {
-        return -1;
-      }
+      return (primero.name < segundo.name) * (-1);
     });
-    return pokeOrdenados;
+    return pokeOrdenados.reverse();
   } else if (condicion === 'spawnmas') {
     const pokeOrdenados = array.sort((primero, segundo) => {
       return segundo.avg_spawns - primero.avg_spawns;

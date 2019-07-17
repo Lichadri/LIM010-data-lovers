@@ -7,7 +7,6 @@ const ordernarPor = document.getElementById('ordenar-por');
 const filtrarTipo = document.getElementById('filtrar-por');
 const filtrarDebilidad = document.getElementById('debilidad');
 const filtrarHuevos = document.getElementById('huevos');
-const btnPokedex = document.getElementById('pokedex');
 const btnSalir = document.getElementById('btn-salir');
 
 /* Login */
@@ -100,19 +99,10 @@ filtrarHuevos.addEventListener('change', () => {
   console.log(filtrarHuevos);
 });
 
-/* Agregar evento para pokedex*/
-btnPokedex.addEventListener('click', () => {
-  ordernarPor.value = '';
-  filtrarTipo.value = '';
-  filtrarDebilidad.value = '';
-  filtrarHuevos.value = '';
-  porcentaje.innerHTML = '';
-  const filtroPokedex = ordenar('pokedex');
-  mostrarPokemones(filtroPokedex);
-});
-
 /* Agregar evento para salir*/
 btnSalir.addEventListener('click', () => {
   document.getElementById('vista1').classList.add('hide');
   document.getElementById('login').classList.remove('hide');
 });
+
+

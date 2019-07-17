@@ -109,6 +109,9 @@ describe('ordenar', () => {
   it('debería retornar de spawnmenos', () => {
     expect(ordenar('spawnmenos', pokemon)[0].avg_spawns).toEqual(30);
   });
+  it('debería retornar por numero de pokedex', () => {
+    expect(ordenar('pokedex', pokemon)[0].num).toEqual('010');
+  });
 });
 
 describe('filtrar', () => {
