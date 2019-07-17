@@ -100,7 +100,6 @@ describe('ordenar', () => {
   it('debería retornar de az', () => {
     expect(ordenar('az', pokemon)[0].name).toEqual('Caterpie');
   });
-  
   it('debería retornar de za', () => {
     expect(ordenar('za', pokemon)[0].name).toEqual('Ekans');
   });
@@ -109,6 +108,9 @@ describe('ordenar', () => {
   });
   it('debería retornar de spawnmenos', () => {
     expect(ordenar('spawnmenos', pokemon)[0].avg_spawns).toEqual(30);
+  });
+  it('debería retornar por numero de pokedex', () => {
+    expect(ordenar('pokedex', pokemon)[0].num).toEqual('010');
   });
 });
 

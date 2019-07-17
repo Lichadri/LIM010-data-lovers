@@ -1,12 +1,13 @@
 /* variables */
 const pokedata = POKEMON.pokemon;
 const dataCopiada = POKEMON.pokemon.slice(0, 150);
-const claveIngresada = 'LABORATORIA';
+const claveIngresada = '';
 const btnIngresar = document.getElementById('btn-ingresar');
 const ordernarPor = document.getElementById('ordenar-por');
 const filtrarTipo = document.getElementById('filtrar-por');
 const filtrarDebilidad = document.getElementById('debilidad');
 const filtrarHuevos = document.getElementById('huevos');
+const btnSalir = document.getElementById('btn-salir');
 
 /* Login */
 btnIngresar.addEventListener('click', () => {
@@ -36,7 +37,7 @@ const mostrarPokemones = (arrayPokemones) => {
     <div class='poke' name='pokemon' id=${id}>
     <p> ${num} </p>
     <p> ${nombre} </p>
-    <img src="${imagen}"/>
+    <img class='img-pokemon' src='${imagen}'/>
     </div>`;
   }
 };
@@ -98,19 +99,10 @@ filtrarHuevos.addEventListener('change', () => {
   console.log(filtrarHuevos);
 });
 
-/* Agregar evento para pokedex*/
-btnPokedex.addEventListener('click', () => {
-  ordernarPor.value = '';
-  filtrarTipo.value = '';
-  filtrarDebilidad.value = '';
-  filtrarHuevos.value = '';
-  porcentaje.innerHTML = '';
-  const filtroPokedex = ordenar('pokedex');
-  mostrarPokemones(filtroPokedex);
-});
-
 /* Agregar evento para salir*/
 btnSalir.addEventListener('click', () => {
   document.getElementById('vista1').classList.add('hide');
   document.getElementById('login').classList.remove('hide');
 });
+
+
