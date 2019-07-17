@@ -1,17 +1,17 @@
-
 *{
     outline: none;
-}
-.header-principal{
+    margin: 0;
+ }
+ .header{
     display: flex;
-    width: 1030px;
+    width: 850px;
     margin: auto;
-    height: 300px;
+    height: 180px;
     justify-content: center;
-}
-
-@media(max-width:600px) {
-    .header-principal{
+   }
+ 
+ @media(max-width:801px) {
+    .header{
         width: 100%;
         flex-direction: column;
         padding: 2px opx;
@@ -20,35 +20,36 @@
         display: flex;
         justify-content: center;
     }
-}
-
-main{
+ }
+ 
+ main{
     display: flex;
     justify-content: center;
-    margin: 64px 0px 0px 0px;
-}
-@media(max-width:600px) {
+    align-items: center;
+    height: calc(100vh - 255px);
+ }
+ @media(max-width:801px) {
     main{
         display: flex;
         justify-content: center;
         margin: 0px 13px;
     }
-}
-.hide{
+ }
+ .hide{
     Display:none;
     }
-
-#encabezado{
+ 
+ #encabezado{
     background-image: url(./Imagenes/pokedata.png);
     background-repeat: no-repeat;
     background-size: contain;
-    width: 203%;
+    width: 38%;
     background-position: center;
-    margin: 30px 0px 0px 98px;
-    padding: 71px;
+    margin: 25px 0px 0px 90px;
+    padding: 60px;
     justify-content: center;
-    }
-@media(max-width:600px) {
+     }
+ @media(max-width:801px) {
         #encabezado{
             background-image: url(./Imagenes/pokedata.png);
             width: 86%;
@@ -60,18 +61,18 @@ main{
             justify-content: center;
             }
         }
-
-#pokebola{
+ 
+ #pokebola{
         background-image: url(./Imagenes/pokebola.png);
         background-repeat: no-repeat;
-        width: 59%;
+        width: 10%;
         background-size: contain;
         background-position: center;
-        margin: 19px 0px 0px 22px;
+        margin: 12px 0px 0px 15px;
         align-content: center;
         justify-content: flex-end;
     }
-@media(max-width:600px) {
+ @media(max-width:801px) {
         #pokebola{
             background-image: url(./Imagenes/pokebola.png);
             background-repeat: no-repeat;
@@ -83,18 +84,18 @@ main{
             display: block;
         }
         }
-
+ 
     #login{
         font-family: Open Sans;
-    font-style: normal;
-    font-weight: normal;
-    color: #000000;
-    font-size: 39px;
-    width: 417px;
-    height: 651px;
-    flex-direction: column;
+        font-style: normal;
+        font-weight: normal;
+        color: #000000;
+        font-size: 20px;
+        width: 250px;
+        height: 70%;
+        /* flex-direction: column; */
     }
-    @media(max-width:600px) {
+    @media(max-width:801px) {
     #login{
         flex-flow: column;
     font-family: Open Sans;
@@ -102,13 +103,13 @@ main{
     font-weight: normal;
     color: #000000;
     font-size: 44px;
-    width: 666px;
-    height: 814px;
-        
+    width: 665px;
+    height: 815px;
+       
         }
     }
-
-
+ 
+ 
     body{
         background-image: url(./Imagenes/Fondo.png);
         background-size: cover;
@@ -116,7 +117,7 @@ main{
         position: relative;
         font-family: 'Montserrat';
     }
-      @media screen and (max-width:600px) {
+    @media(max-width:801px) {
         body{
             background-image: url(./Imagenes/Fondo.png);
             background-size: cover;
@@ -130,18 +131,18 @@ main{
             width: 278%;
           }
         }
-
-
+ 
+ 
         form{
             display: block;
             font-family: Open Sans;
             flex-direction: column;
-            width: 108%;
-            height: 49%;
+            width: 145%;
+            height: 45%;
         }
         @media (max-width: 600px){
             form {
-            
+           
                 font-family: Open Sans;
                 flex-direction: column;
                 /* justify-content: center; */
@@ -149,7 +150,7 @@ main{
                 width: 448px;
     }
         }
-   
+  
     input{
         border-radius: 2px;
     line-height: 44px;
@@ -157,12 +158,12 @@ main{
     font-style: normal;
     font-weight: normal;
     color: #000000;
-    font-size: 24px;
+    font-size: 20px;
     display: block;
-    height: 50px;
-    margin: 9px 0px 14px 0px;
-    width: 431px;
-}
+    height: 35px;
+    margin: 6px 0px 14px 0px;
+    width: 285px;
+ }
  @media (max-width: 600px){
     input{
         border-radius: 2px;
@@ -177,21 +178,20 @@ main{
         margin: 5px 0;
         width: 670px;
     }
-}
+ }
  #btn-ingresar{
     background: #ffcc03;
     border-color: #3897F0;
     border-radius: 5px;
     font-family: Open Sans;
     font-weight: 600;
-    font-size: 34px;
-    color: v#3897F0;
+    font-size: 18px;
     justify-content: space-around;
     display: flex;
     /* padding: 3px; */
     /* margin: -2px; */
-    width: 97%;
-    height: 18%;
+    width: 81%;
+    height: 40px;
  }
  @media (max-width: 600px){
     #btn-ingresar{
@@ -207,19 +207,20 @@ main{
         padding: 0px;
         margin: 0px;
         width: 674px;
+        height:100px;
      }
     }
  #pikachu{
     background-image: url(./Imagenes/pikachu.gif);
     background-repeat: no-repeat;
-    padding: 62px 0px;
+    padding: 40px 0px;
     background-size: contain;
     background-position: center;
-    width: 104%;
+    width: 115%;
     height: -6%;
-    margin: 88px 0px;
-}
-@media (max-width:600px) {
+    margin: 180px 0px;
+ }
+ @media (max-width:801px) {
     #pikachu{
         background-image: url(./Imagenes/pikachu.gif);
         background-repeat: no-repeat;
@@ -229,19 +230,19 @@ main{
         height: 17%;
     }
     }
-
+ 
  #resultado{
     font-family: Open Sans;
     font-style: normal;
     font-weight: 600;
     color: black;
-    font-size: 26px;
+    font-size: 18px;
     display: flex;
-    width: 100%;
+    width: 80%;
     justify-content: center;
-    margin: 20px 0px;
+    margin: 18px 0px;
     }
-    @media (max-width:600px) {
+    @media (max-width:801px) {
         #resultado{
             font-family: Open Sans;
     font-style: normal;
@@ -253,28 +254,32 @@ main{
     width: 672px;
             }
         }
-
+ 
     .navegacion{
-        background: rgb(98, 40, 16, 0.25);
+    background: rgb(98, 40, 16, 0.25);
     justify-content: flex-start;
     height: auto;
     margin: 0px 0px 0px 0px;
     padding: 9px 0px 10px 282px;
+    font-size: 3px;
+    position: -webkit-sticky;
+    position: sticky; top: 0px;
+    z-index:2;
     }
-   
-#contenedor{
+  
+ #contenedor{
     display: inline-flex;
     flex-wrap: wrap;
     margin: 26px 20px 20px 20px;
     padding: 5px 1px 20px 94px;
-}
-p{
+ }
+ p{
     text-align: center;
     color: white;
-    font-weight: 800;
-    font-size: 22px;
+    font-weight: 600;
+    font-size: 17px;
     margin: 3px 0px 0px 0px;
-}
+ }
     .poke{
         width: 10%;
         position: relative;
@@ -289,22 +294,21 @@ p{
         background: linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 100%);
         border-radius: 15px;
         }
-
-.modal {
-
+ 
+ .modal {
+ 
     position: fixed;
-    z-index: 1; 
+    z-index: 3;
     left: 0;
     top: 0;
-    width: 100%; 
-    height: 100%; 
-    overflow: auto; 
-    background-color: rgb(0,0,0); 
-    background-color: rgba(0,0,0,0.6); 
-
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.6);
+ 
   }
-  
-  .modal-info {
+   .modal-info {
     font-size: 25px;
     margin: 0% auto;
     /* padding: 20px; */
@@ -313,7 +317,7 @@ p{
     text-align: center;
     color: white;
   }
-
+ 
   .modal-content {
     font-size: 27px;
     margin: 10% auto;
@@ -326,13 +330,13 @@ p{
     color: #D7AC03;
     font-weight: 900;
     }
-
+ 
     .imagenModal{
-        
+       
         width: 80%;
         height: 80%;
     }
-
+ 
   /* The Close Button */
   .close {
     color: #aaa;
@@ -341,31 +345,30 @@ p{
     font-weight: bold;
     cursor: pointer;
   }
-  
-  .close:hover .close:focus {
+   .close:hover .close:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
   }
-    
+   
       .filter{
         align-self: center;
       }
-      
+     
       .ordenar{
         align-self: center;
       }
-    
-.form-filtro{
-    width: 213px;
+   
+ .form-filtro{
+    width: 150px;
     display: inline-block;
-    font-size: 26px;
+    font-size: 20px;
     position: relative;
     text-align: left;
     border-color: #23d160;
     border-radius: 5px;
       }
-     
+    
       select{
           width: 20px;
       }
@@ -373,7 +376,7 @@ p{
         width: 100%;
         height: auto;
     }
-
+ 
     /* .home{
         background-image: url(Imagenes/home.png);
         background-size: cover;
@@ -393,7 +396,7 @@ p{
         display: initial;
       }
        */
-
+ 
        .porcentaje{
         text-align: center;
         color:#112D5D;

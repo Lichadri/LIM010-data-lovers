@@ -1,5 +1,5 @@
-
-# ![PokeData](https://user-images.githubusercontent.com/51204770/60685163-30db2880-9e67-11e9-9811-13ae563ea23b.png)
+# 
+ <img src="src/imagenes/pokedata.png">
 
 ## Índice
 
@@ -49,7 +49,7 @@ Criterios de Aceptación:
 
 Criterios de Aceptación:
 - El usuario al ingresar puede visualizar los 151 pokemones (nombre, número e imagen)
-- El usuario puede visualizar en la parte superior la cantidad de pokemones atrapados y los que le falta atrapar.
+- El usuario al hacer “click” sobre la imagen de un pokémon puede visualizar información de los pokemones.
 - La página se adapta a desktop y móvil.
 
 ## 3er Sprint 06/07 al 12/07
@@ -59,6 +59,9 @@ Criterios de Aceptación:
 4. Como usuaria quiero poder filtrar a los pokemones por tipo y debilidades para saber quiénes y cuántos son de cada tipo y tienen esa debilidad.
 5. Como usuaria quiero poder obtener el porcentaje de los pokemones que aparecen en los diferentes tipos de huevo para saber qué huevos eclosionar.
 Criterios de Aceptación:
+- El usuario al seleccionar los botones de navegación puede FILTRAR pokemones (tipo, debilidad)
+- El usuario puede ordenar los 151 de A-Z, Z-A
+- La página se adapta a desktop y móvil.
 
 
 ## UX (Diseño de experiencia de usuario)
@@ -90,5 +93,4 @@ Al compartir el diseño con los usuario nos hicieron notar algunos detalles que 
 - Agregar el footer
 - Agregar características de los pokémon
 ![Prototipado en Figma](https://user-images.githubusercontent.com/51204770/60689653-58d98480-9e85-11e9-84c1-4e1649b27a15.png)
-
 

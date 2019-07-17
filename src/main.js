@@ -69,7 +69,7 @@ document.getElementById('close').addEventListener('click', () => {
 /* Agregar evento para ordenar de a-z, z-a, pokedex, aparecen mas y aparecen menos*/
 ordernarPor.addEventListener('change', () => {
   const condicion = ordernarPor.value;
-  const pokemonesOrdenados = ordenar(condicion);
+  const pokemonesOrdenados = ordenar(condicion, pokedata);
   mostrarPokemones(pokemonesOrdenados);
 });
 
