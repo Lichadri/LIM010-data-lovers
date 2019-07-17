@@ -257,7 +257,7 @@ background-color: rgba(0,0,0,0.6);
            background-position: center;
        }
    main{
-      height: calc(75vh - 65px);
+      height: calc(73vh - 65px);
       margin: 32px;
       }
      
@@ -317,30 +317,20 @@ font-size: 13px;
 .img-pokemon{
    width: 100%;
    }
-.modal {
-position: fixed;
-z-index: 1;
-left: 0;
-top: 0;
-width: 100%;
-height: 100%;
-overflow: auto;
-background-color: rgb(0,0,0);
-background-color: rgba(0,0,0,0.6);
-}
+.modal {position: fixed;z-index: 1;left: 0;top: 0;width: 100%;height: 100%;background-color: rgb(0,0,0);background-color: rgba(0,0,0,0.6);}
   .modal-info {
  }
  .modal-content {
-   font-size: 21px;
-   margin: 43% auto;
-   padding: 12px;
-   border: 5px solid #888;
-   background: #112D5D;
-   border-radius: 15px;
-   width: 206px;
-   text-align: center;
-   color: #D7AC03;
-   font-weight: 900;
+   /* font-size: 21px; */
+   /* margin: 43% auto; */
+   /* padding: 12px; */
+   /* border: 5px solid #888; */
+   /* background: #112D5D; */
+   /* border-radius: 15px; */
+   /* width: 206px; */
+   /* text-align: center; */
+   /* color: #D7AC03; */
+   /* font-weight: 900; */
    }
    .imagenModal{
       
@@ -348,11 +338,11 @@ background-color: rgba(0,0,0,0.6);
        height: 80%;
    }
  .close {
-   color: #aaa;
-   float: right;
-   font-size: 33px;
-   font-weight: bold;
-   cursor: pointer;
+   /* color: #aaa; */
+   /* float: right; */
+   /* font-size: 33px; */
+   /* font-weight: bold; */
+   /* cursor: pointer; */
  }
   .close:hover .close:focus {
    color: rgb(207, 25, 25);
@@ -417,7 +407,7 @@ background-color: rgba(0,0,0,0.6);
        border-radius: 13px;
        transition: .4s;
        /* padding: 0px; */
-       margin: 40px 23px 62px 38px;
+       margin: 41px 18px 96px 20px;
        font-size: 22px;
        }
   .modal-info {
@@ -428,7 +418,7 @@ background-color: rgba(0,0,0,0.6);
  }
  .modal-content {
    font-size: 24px;
-   margin: 25% auto;
+   margin: 17% auto;
    border-radius: 43px;
    width: 434px;
    }
@@ -438,10 +428,9 @@ background-color: rgba(0,0,0,0.6);
        height: 80%;
    }
  .close {
-   color: white;
-   font-size: 31px;
+   font-size: 37px;
    cursor: pointer;
-   right: 535px;
+   right: 764px;
    position: absolute;
  }
   .close:hover .close:focus {
@@ -455,10 +444,12 @@ background-color: rgba(0,0,0,0.6);
      .ordenar{
        align-self: center;
      }
+  .filtrado{
+  }
 .form-filtro{
    height: 44px;
-   width: 336px;
-   left: 18px;
+   width: 424px;
+   left: 72px;
    position: relative;
    font-size: 30px;
    box-shadow: 0 -9px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
