@@ -3,6 +3,8 @@ const ordenar = (condicion, array) => {
   let pokeOrdenados = [];
   if (condicion === 'az') {
     pokeOrdenados = array.sort((primero, segundo) => {
+      /* Si la compracion resulta verdadero tomara como  valor "1" 
+     y multiplicado por menos 1 se convierte en negativo y ordena de menor a mayo*/
       return (primero.name < segundo.name) * (-1);
     });
   } else if (condicion === 'za') {
@@ -26,24 +28,27 @@ const ordenar = (condicion, array) => {
 };
 
 /* Funcion filtrar tipo */
-const filtrar = (filtroSeleccionado, pokedata) => {
-  const PokeFiltrados = pokedata.filter((condicion) => {
+const filtrar = (filtroSeleccionado, array) => {
+  const PokeFiltrados = array.filter((condicion) => {
+    /* Busca el filtro seleccionado dentro del tipo de cada pokemon, si 
+    lo encuentra dara un valor de 0 o mayor a 0, en caso no lo encuentre
+    devolvera -1. En este caso 0 es mayor que menos 1, por lo tanto es verdadero*/
     return condicion.type.indexOf(filtroSeleccionado) > -1;
   });
   return PokeFiltrados;
 };
 
 /* Funcion filtrar debilidad */
-const debilidad = (filtroDebilidad, pokedata) => {
-  const PokeDebilidad = pokedata.filter((condicion) => {
+const debilidad = (filtroDebilidad, array) => {
+  const PokeDebilidad = array.filter((condicion) => {
     return condicion.weaknesses.indexOf(filtroDebilidad) > -1;
   });
   return PokeDebilidad;
 };
 
 /* Funcion filtrar huevos */
-const huevos = (filtroHuevos, pokedata) => {
-  const PokeHuevos = pokedata.filter((condicion) => {
+const huevos = (filtroHuevos, array) => {
+  const PokeHuevos = array.filter((condicion) => {
     return condicion.egg.indexOf(filtroHuevos) > -1;
   });
   return PokeHuevos;
