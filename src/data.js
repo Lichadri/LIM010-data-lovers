@@ -1,5 +1,4 @@
 /* Funcion ordenar */
-
 const ordenar = (condicion, array) => {
   let pokeOrdenados = [];
   if (condicion === 'az') {

@@ -17,7 +17,7 @@ btnIngresar.addEventListener('click', () => {
     document.getElementById('login').classList.add('hide');
     document.getElementById('vista1').classList.remove('hide');
     const contenedor = document.getElementById('contenedor');
-    mostrarPokemones(POKEMON.pokemon);
+    mostrarPokemones(pokedata);
   } else {
     document.getElementById('resultado').innerHTML = 'Usuario o  contraseña incorrecta';
     /* hacer foco a la contraseña para que se quede el puntero fijo*/

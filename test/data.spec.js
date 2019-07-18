@@ -94,10 +94,10 @@ const pokemon = [{
 
 describe('ordenar', () => {
   it('debería ser una función', () => {
-    expect(typeof ordenar).toBe('function');
+    expect(typeof ordenar).toEqual('function');
   });
   it('deberia retornar un nuevo array de objetos ordenados', () => {
-    expect(Array.isArray(ordenar('az', pokemon))).toBe(true);
+    expect(Array.isArray(ordenar('az', pokemon))).toEqual(true);
   });
   // it('deberia no modifcar el array original', () => {
   //   expect(ordenar('az', pokemon)).not.toBe(pokemon);
@@ -108,10 +108,10 @@ describe('ordenar', () => {
   it('debería retornar un array de objetos con los pokemones ordenados por el nombre de Z-A', () => {
     expect(ordenar('za', pokemon)[0].name).toEqual('Ekans');
   });
-  it('debería retornar de spawnmas', () => {
+  it('debería retornar de mayor a menor aparicion', () => {
     expect(ordenar('spawnmas', pokemon)[0].avg_spawns).toEqual(303.2);
   });
-  it('debería retornar de spawnmenos', () => {
+  it('debería retornar de mayor a menor aparicion', () => {
     expect(ordenar('spawnmenos', pokemon)[0].avg_spawns).toEqual(30);
   });
   it('debería retornar por numero de pokedex', () => {
@@ -121,7 +121,7 @@ describe('ordenar', () => {
 
 describe('filtrar', () => {
   it('debería ser una función', () => {
-    expect(typeof filtrar).toBe('function');
+    expect(typeof filtrar).toEqual('function');
   });
 
   it('debería retornar tipo', () => {
@@ -131,7 +131,7 @@ describe('filtrar', () => {
 
 describe('debilidad', () => {
   it('debería ser una función', () => {
-    expect(typeof debilidad).toBe('function');
+    expect(typeof debilidad).toEqual('function');
   });
 
   it('debería retornar debilidad', () => {
@@ -141,7 +141,7 @@ describe('debilidad', () => {
 
 describe('huevos', () => {
   it('debería ser una función', () => {
-    expect(typeof huevos).toBe('function');
+    expect(typeof huevos).toEqual('function');
   });
 
   it('debería retornar huevos de 2km', () => {
