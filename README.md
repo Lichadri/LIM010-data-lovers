@@ -1,7 +1,6 @@
 
 # ![image](https://user-images.githubusercontent.com/51204770/61410964-f469ec80-a8aa-11e9-98c4-8313bb89e7e2.png)
 
- <img src="src/imagenes/pokedata.png">
 
 ## Índice
 
