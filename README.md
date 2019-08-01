@@ -6,7 +6,6 @@
 
 - [Índice](#índice)
 - [Preámbulo](#preámbulo)
-- [Historias de Usuario](#historias-de-usuario)
 - [UX](#ux)
 
 
@@ -19,51 +18,7 @@ Para acceder al POKEDATA, se debe acceder el siguiente usuario/contraseña
 <br>USUARIO: LABORATORIA
 <br>CONTRASEÑA: LABORATORIA
 
- Equipo de trabajo:
-<br> Alumnas del Bootcamp de Laboratoria
-- Leslye Campos
-- Adriana Bautista
-
-## Status del proyecto:
-
- ## 1er Sprint 24/06 al 28/06
- <br>Para esta primera etapa se ha seleccionado la primera historia de nuestro producto para presentar al usuario acompañadas de los criterios de aceptación para satisfacer las necesidades de usuario.
-
- ### Historias de Usuario (1er sprint)
-
- 1.- Como usuaria quiero poder loguearme  para acceder al sitio web.
-
-Criterios de Aceptación:
-
-- El usuario puede ingresar con un usuario y contraseña válida. (LABORATORIA)
-- El acceso queda bloqueado mientras no ingrese el usuario y contraseña correcta.
-- La página de login se adapta a cualquier dispositivo.
-
- ## 2do Sprint 29/06 al 05/07
- <br> Para la segunda etapa se seleccionaron las segunda y tercera historias de usuario
-
-### Historias de Usuario (2do sprint)
  
- 2.- Como usuaria quiero poder ver a todos los pokemones al ingresar a la página para saber cuántos tengo y cuántos me faltan atrapar.
-
- 3.- Como usuaria quiero poder elegir un pokemon para ver sus características más relevantes.
-
-Criterios de Aceptación:
-- El usuario al ingresar puede visualizar los 151 pokemones (nombre, número e imagen)
-- El usuario al hacer “click” sobre la imagen de un pokémon puede visualizar información de los pokemones.
-- La página se adapta a desktop y móvil.
-
-## 3er Sprint 06/07 al 12/07
-<br> Para la última etapa se seleccionaron las cuarta, quinta historias de usuario
-
-### Historias de Usuario (3er sprint)
-4. Como usuaria quiero poder filtrar a los pokemones por tipo y debilidades para saber quiénes y cuántos son de cada tipo y tienen esa debilidad.
-5. Como usuaria quiero poder obtener el porcentaje de los pokemones que aparecen en los diferentes tipos de huevo para saber qué huevos eclosionar.
-Criterios de Aceptación:
-- El usuario al seleccionar los botones de navegación puede FILTRAR pokemones (tipo, debilidad)
-- El usuario puede ordenar los 151 de A-Z, Z-A
-- La página se adapta a desktop y móvil.
-
 
 ## UX (Diseño de experiencia de usuario)
 
@@ -107,10 +62,18 @@ Al compartir el diseño con los usuario nos hicieron notar algunos detalles que 
 
 Prototipado en Figma
 Realizamos nuestro prototipado en FIGMA para acercar lo más acerca del usuario.
-[Diseño en Figma](https://www.figma.com/file/MUGvPCIU0kkZGED0NWl8EqVN/Pokedata?node-id=79%3A34)
+
 ![Login](https://user-images.githubusercontent.com/51204770/61462391-2f663180-a938-11e9-8a04-035bf0943919.png)
 ![Vista 1](https://user-images.githubusercontent.com/51204770/61462511-5ae91c00-a938-11e9-8629-704a44e3d07e.png)
 ![Selección por Pokemón](https://user-images.githubusercontent.com/51204770/61462584-76ecbd80-a938-11e9-8127-4cd3f0b839ee.png)
+
+#### Testeo de Usabilidad
+Realizamos pruebas de observación  a diferentes usuarios y notamos los siguientes comportamientos:
+-Los usuarios se alejaban para visualizar toda la información (El logo y las imágenes muy grandes).
+-Al querer buscar un pokémon para un usuario inexperto se le hacia más complicado por los filtros. (se agregó un buscador para encontrar a los pokemones por palabras claves).
+
+[Diseño en Figma](https://www.figma.com/proto/tWHRnVLtIrQlkZjAaisF91/Adriana?node-id=3%3A1&scaling=min-zoom)
+
 
 
 
